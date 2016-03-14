@@ -1,9 +1,10 @@
 package geometrija;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 public abstract class PovrsinskiOblik extends Oblik{
-	protected String bojaUnutrasnjosti = "zelena";
+	protected Color bojaUnutrasnjosti = Color.green;
 	
 	public abstract void popuni(Graphics g);
 	private boolean popunjen;
@@ -11,11 +12,11 @@ public abstract class PovrsinskiOblik extends Oblik{
 	public abstract double obim();
 	public abstract double povrsina();
 
-	public String getBojaUnutrasnjosti() {
+	public Color getBojaUnutrasnjosti() {
 		return bojaUnutrasnjosti;
 	}
 
-	public void setBojaUnutrasnjosti(String bojaUnutrasnjosti) {
+	public void setBojaUnutrasnjosti(Color bojaUnutrasnjosti) {
 		this.bojaUnutrasnjosti = bojaUnutrasnjosti;
 	}
 	

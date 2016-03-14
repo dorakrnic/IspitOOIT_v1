@@ -159,7 +159,7 @@ public class DlgDodaj extends JDialog {
 									String boja=(String) comboBoja.getSelectedItem();
 									
 									Tacka tacka=new Tacka(xKoo,yKoo);
-									krug=new Krug(tacka,radius,boja);
+									krug=new Krug(tacka,radius);
 									dispose();
 									
 								}catch(NumberFormatException ex){

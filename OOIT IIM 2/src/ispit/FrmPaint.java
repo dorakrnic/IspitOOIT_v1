@@ -54,7 +54,7 @@ public class FrmPaint extends JFrame {
 	/**
 	 * bojaUnutr --> boja povrsine
 	 */
-	public static String bojaUnutr="zuta";
+	public static Color bojaUnutr=Color.yellow;
 	
 	private final ButtonGroup btnGroupOblici = new ButtonGroup();
 	private final ButtonGroup btnGroupAkcija = new ButtonGroup();
@@ -279,7 +279,7 @@ public class FrmPaint extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				actionStr=e.getActionCommand();
 				lblInfo.setText("Kliknuti unutar povrsinskog oblika da se oboji");
-				bojaUnutr=bojaStr;
+				bojaUnutr=boja;
 			}
 		});
 /////////////////////////selekcija//////////////////////////////////	
@@ -345,23 +345,27 @@ public class FrmPaint extends JFrame {
 					if(actionStr=="OK"){
 						if(PnlCrtez.selektovan.typeToString()=="Kvadrat"){
 							PnlCrtez.selektovan.setStranica(dlgM.sirina);
-							if(actionStr=="btnBojaClicked")
-								PnlCrtez.selektovan.setBoja(bojaStr);
-						}else if(PnlCrtez.selektovan.typeToString()=="Pravougaonik"){
+							if(dlgM.action=="btnBojaClicked")
+								PnlCrtez.selektovan.setColor(dlgM.bojaIvice);
+						}
+						if(PnlCrtez.selektovan.typeToString()=="Pravougaonik"){
 							PnlCrtez.selektovan.setStranica(dlgM.sirina);
 							PnlCrtez.selektovan.setVisina(dlgM.visina);
-							if(actionStr=="btnBojaClicked")
-								PnlCrtez.selektovan.setBoja(bojaStr);
-						}else if(PnlCrtez.selektovan.typeToString()=="Krug"){
-							PnlCrtez.selektovan.setRadius(dlgM.sirina);
-							if(actionStr=="btnBojaClicked")
-								PnlCrtez.selektovan.setBoja(bojaStr);
-						}else if(PnlCrtez.selektovan.typeToString()=="Linija"){
-							((Linija)(PnlCrtez.selektovan)).promeniDuzinu(dlgM.sirina);
-							if(actionStr=="btnBojaClicked")
-								PnlCrtez.selektovan.setBoja(bojaStr);
+							if(dlgM.action=="btnBojaClicked")
+								PnlCrtez.selektovan.setColor(dlgM.bojaIvice);
 						}
-						//Tacka je modifikovana u DlgModifikacija
+						if(PnlCrtez.selektovan.typeToString()=="Krug"){
+							PnlCrtez.selektovan.setRadius(dlgM.sirina);
+							if(dlgM.action=="btnBojaClicked")
+								PnlCrtez.selektovan.setColor(dlgM.bojaIvice);
+						}
+						if(PnlCrtez.selektovan.typeToString()=="Linija"){
+							((Linija)(PnlCrtez.selektovan)).promeniDuzinu(dlgM.sirina);
+							if(dlgM.action=="btnBojaClicked")
+								PnlCrtez.selektovan.setColor(dlgM.bojaIvice);
+						}
+						if(PnlCrtez.selektovan.typeToString()=="Tacka")
+							((Tacka) PnlCrtez.selektovan).setColor(dlgM.bojaIvice);
 					}
 					
 				}

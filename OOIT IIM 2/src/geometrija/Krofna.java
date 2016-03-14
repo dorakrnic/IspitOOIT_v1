@@ -1,5 +1,7 @@
 package geometrija;
 
+import java.awt.Color;
+
 public class Krofna extends Krug {
 	private Krug unutrasnji;
 
@@ -12,14 +14,14 @@ public class Krofna extends Krug {
 		super(new Tacka(x, y), radiusSpoljasnji);
 		unutrasnji=new Krug(super.getCentar(), radiusUnutrasnji);
 	}
-	public Krofna (Tacka centarKrofne, int radiusSpoljasnji, int radiusUnutrasnji, String boja){
+	public Krofna (Tacka centarKrofne, int radiusSpoljasnji, int radiusUnutrasnji, Color boja){
 		super(centarKrofne, radiusSpoljasnji, boja);
-		unutrasnji=new Krug(centarKrofne, radiusSpoljasnji, "BELA");
+		unutrasnji=new Krug(centarKrofne, radiusSpoljasnji, Color.white);
 	}
 
-	public Krofna(int x, int y, int radiusSpoljasnji, int radiusUnutrasnji, String boja){
+	public Krofna(int x, int y, int radiusSpoljasnji, int radiusUnutrasnji, Color boja){
 		super(new Tacka(x, y), radiusSpoljasnji, boja);
-		unutrasnji= new Krug(super.getCentar(), radiusUnutrasnji, "BELA");
+		unutrasnji= new Krug(super.getCentar(), radiusUnutrasnji, Color.white);
 	}
 
 	public void pomeriNa(int x, int y){

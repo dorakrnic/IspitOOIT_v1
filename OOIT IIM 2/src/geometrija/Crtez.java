@@ -24,14 +24,14 @@ public class Crtez extends JPanel{
 			public void mouseClicked(MouseEvent e) {
 				int x = e.getX();
 				int y = e.getY();
-				Tacka t = new Tacka(x, y,"crna");
+				Tacka t = new Tacka(x, y, Color.black);
 				DlgPravougaonik dlgp = new DlgPravougaonik();
 				dlgp.setVisible(true);
 				int visina = Integer.parseInt(dlgp.visina);
 				int sirina = Integer.parseInt(dlgp.sirina);
-				Pravougaonik p = new Pravougaonik(t, sirina, visina, dlgp.boja);
+			//	Pravougaonik p = new Pravougaonik(t, sirina, visina, dlgp.boja);
 				
-				oblici.add(p);
+				//oblici.add(p);
 				
 			}
 		});

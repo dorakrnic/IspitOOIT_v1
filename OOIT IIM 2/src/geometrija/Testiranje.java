@@ -212,7 +212,7 @@ public class Testiranje {
         System.out.println("Zbir duzina linija je: "+(l10.duzina()+l11.duzina()+l12.duzina()));
         System.out.println("Duzina polilinije je: "+ poli.duzina());
 	 */
-		Tacka t6= new Tacka(2, 2);
+	/*	Tacka t6= new Tacka(2, 2);
 		Krug k5 = new Krug(t6, 35, "ZELENA");
 		ArrayList<Krug> lista = new ArrayList<Krug>();
 
@@ -226,7 +226,7 @@ public class Testiranje {
 		//System.out.println(lista.get(0));
 		Iterator<Krug> it = lista.iterator();
 		while (it.hasNext())
-			System.out.println(it.next());
+			System.out.println(it.next());*/
 		
 
 		Tacka t10 = new Tacka(2, 2);

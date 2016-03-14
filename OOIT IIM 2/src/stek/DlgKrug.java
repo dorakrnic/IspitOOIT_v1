@@ -161,7 +161,7 @@ public class DlgKrug extends JDialog {
 									String boja=(String) comboBoja.getSelectedItem();
 									if(radius!=0){
 										Tacka tacka=new Tacka(xKoo,yKoo);
-										krug=new Krug(tacka,radius,boja);
+										krug=new Krug(tacka,radius);
 										
 										dispose();
 									}

@@ -46,7 +46,8 @@ public class Linija extends Oblik implements Comparable{
 	}
 
 	public void crtajSe(Graphics g){
-		g.setColor(pronadjiBoju(getBoja()));
+		//g.setColor(pronadjiBoju(getBoja()));
+		g.setColor(getColor());
 		g.drawLine(pocetna.getX(), pocetna.getY(), krajnja.getX(), krajnja.getY());
 		if(isSelektovan()){
 			selektovan(g);

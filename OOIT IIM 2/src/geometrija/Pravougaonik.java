@@ -25,10 +25,10 @@ public class Pravougaonik extends Kvadrat {
 		new Linija(new Tacka(getGoreLevo().getX(), getGoreLevo().getY()+visina), dijagonala().getKrajnja()).selektovan(g);
 	}
 
-	public Pravougaonik(Tacka goreLevo, int sirina, int visina, String boja){
+	public Pravougaonik(Tacka goreLevo, int sirina, int visina, Color boja){
 		this(goreLevo, sirina, visina);
-		setBoja(boja);
-
+		setColor(boja);
+		//this.color=boja;
 	}
 
 	public int compareTo(Object o) {
@@ -37,13 +37,15 @@ public class Pravougaonik extends Kvadrat {
 	}
 	
 	public void popuni(Graphics g) {
-		g.setColor(pronadjiBoju(getBojaUnutrasnjosti()));
+		//g.setColor(pronadjiBoju(getBojaUnutrasnjosti()));
+		g.setColor(getBojaUnutrasnjosti());
 		g.fillRect(getGoreLevo().getX()+1, getGoreLevo().getY()+1, getStranica()-1, visina-1);
 		
 	}
 	
 	public void crtajSe (Graphics g){
-		g.setColor(pronadjiBoju(this.getBoja()));
+		//g.setColor(pronadjiBoju(this.getBoja()));
+		g.setColor(getColor());
 		g.drawRect(getGoreLevo().getX(), getGoreLevo().getY(), getStranica(), visina);
 		
 		if(isSelektovan())

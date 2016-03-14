@@ -22,10 +22,10 @@ public class Tacka extends Oblik implements Comparable{
 		this.y = y;
 	}
 
-	public Tacka(int x, int y, String boja){
+	public Tacka(int x, int y, Color boja){
 		this.x = x;
 		this.y = y;
-		this.boja = boja;
+		this.color = boja;
 	}
 
 	public int compareTo(Object o) {
@@ -43,7 +43,8 @@ public class Tacka extends Oblik implements Comparable{
 	 @return ne vraca nista
 	 * */
 	public void crtajSe(Graphics g){
-		g.setColor(pronadjiBoju(this.getBoja()));
+		//g.setColor(pronadjiBoju(this.getBoja()));
+		g.setColor(getColor());
 		g.drawLine(x-2, y, x+2, y);
 		g.drawLine(x, y-2, x, y+2);		
 

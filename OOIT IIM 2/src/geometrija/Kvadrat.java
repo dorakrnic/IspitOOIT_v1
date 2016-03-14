@@ -17,10 +17,10 @@ public class Kvadrat extends PovrsinskiOblik implements Comparable{
 		this.stranica = stranica;
 	}
 
-	public Kvadrat(Tacka goreLevo, int stranica,String boja){
+	public Kvadrat(Tacka goreLevo, int stranica,Color boja){
 		this.goreLevo = goreLevo;
 		this.stranica = stranica;
-		this.boja = boja;
+		this.color = boja;
 	}
 	
 	
@@ -40,7 +40,8 @@ public class Kvadrat extends PovrsinskiOblik implements Comparable{
 	}
 
 	public void popuni(Graphics g) {
-		g.setColor(pronadjiBoju(getBojaUnutrasnjosti()));
+		//g.setColor(pronadjiBoju(getBojaUnutrasnjosti()));
+		g.setColor(getBojaUnutrasnjosti());
 		g.fillRect(getGoreLevo().getX()+1, getGoreLevo().getY()+1, getStranica()-1, stranica-1);
 		
 	}
@@ -63,7 +64,8 @@ public class Kvadrat extends PovrsinskiOblik implements Comparable{
 	}
 	
 	public void crtajSe(Graphics g){
-		g.setColor(pronadjiBoju(getBoja()));
+		//g.setColor(pronadjiBoju(getBoja()));
+		g.setColor(getColor());
 		g.drawRect(getGoreLevo().getX(), getGoreLevo().getY(), getStranica(), stranica);
 		
 		if(isSelektovan())
