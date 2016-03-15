@@ -346,26 +346,26 @@ public class FrmPaint extends JFrame {
 						if(PnlCrtez.selektovan.typeToString()=="Kvadrat"){
 							PnlCrtez.selektovan.setStranica(dlgM.sirina);
 							if(dlgM.action=="btnBojaClicked")
-								PnlCrtez.selektovan.setColor(dlgM.bojaIvice);
+								PnlCrtez.selektovan.setCol(dlgM.bojaIvice);
 						}
 						if(PnlCrtez.selektovan.typeToString()=="Pravougaonik"){
 							PnlCrtez.selektovan.setStranica(dlgM.sirina);
 							PnlCrtez.selektovan.setVisina(dlgM.visina);
 							if(dlgM.action=="btnBojaClicked")
-								PnlCrtez.selektovan.setColor(dlgM.bojaIvice);
+								PnlCrtez.selektovan.setCol(dlgM.bojaIvice);
 						}
 						if(PnlCrtez.selektovan.typeToString()=="Krug"){
 							PnlCrtez.selektovan.setRadius(dlgM.sirina);
 							if(dlgM.action=="btnBojaClicked")
-								PnlCrtez.selektovan.setColor(dlgM.bojaIvice);
+								PnlCrtez.selektovan.setCol(dlgM.bojaIvice);
 						}
 						if(PnlCrtez.selektovan.typeToString()=="Linija"){
 							((Linija)(PnlCrtez.selektovan)).promeniDuzinu(dlgM.sirina);
 							if(dlgM.action=="btnBojaClicked")
-								PnlCrtez.selektovan.setColor(dlgM.bojaIvice);
+								PnlCrtez.selektovan.setCol(dlgM.bojaIvice);
 						}
 						if(PnlCrtez.selektovan.typeToString()=="Tacka")
-							((Tacka) PnlCrtez.selektovan).setColor(dlgM.bojaIvice);
+							((Tacka) PnlCrtez.selektovan).setCol(dlgM.bojaIvice);
 					}
 					
 				}

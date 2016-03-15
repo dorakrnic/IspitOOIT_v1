@@ -70,7 +70,7 @@ public abstract class Oblik implements Pomerljiv {
 		return color;
 	}
 
-	public void setColor(Color boja){
+	public void setCol(Color boja){
 		this.color=boja;
 	}
 	

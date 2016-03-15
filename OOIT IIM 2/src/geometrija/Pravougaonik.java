@@ -27,8 +27,8 @@ public class Pravougaonik extends Kvadrat {
 
 	public Pravougaonik(Tacka goreLevo, int sirina, int visina, Color boja){
 		this(goreLevo, sirina, visina);
-		setColor(boja);
-		//this.color=boja;
+		//setCol(boja);
+		this.color=boja;
 	}
 
 	public int compareTo(Object o) {
